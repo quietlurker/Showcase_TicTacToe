@@ -44,3 +44,13 @@ else:
         except ValueError:
             print("Wrong answer")
 
+        # check if anyone one
+        if board.winner:
+            print(f"Game over! Player {board.current_player} wins!")
+            game_on = False
+        # check if there's still space on the board
+        else:
+            if board.game_over:
+                game_on = False
+                print("Game over! No more moves")
+
